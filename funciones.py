@@ -1,31 +1,38 @@
 import random
+import constants
+
+#Función que presenta el juego
 def inicio_juego():
-    #dara acceso a que se imprima el print de bienvenida
-    #Importar constantes
-    print(mensaje_bienvenida)
-    print(introduccion)
+    print(constants.presentacion)
+    print(constants.mensaje_bienvenida)
+    print(constants.introduccion)
+
 
 def jugador_ingresa_coordenada():
     #input de fila e imput de columnas 
     coordenadas_x= int(input("Introduce fila"))
     coordenadas_y= int(input("Introduce columna"))
-    buscar_coordenadas(coordenadas_x, coordenadas_y, 'jugador')
+    disparo_sobre_coordenadas(coordenadas_x, coordenadas_y, True)
 
 
-def buscar_coordenadas(cordenadax, cordenaday, jugador):
-    #IMPORTA CONSTANTES DE TABLERO
-    #Si jugador es persona comprobar tablero posiciones maquina sino viceversa
-    tablero[coordenada_disparo]
-    #checkear en tabla de disparos si el tiro esta repetido si esta repetido llamar a la funcion jugador ingresa coordenada o maquina
-    #si disparo es efectivo/agua pinto en tabla disparos de jugador/maquina el resultado
+def disparo_sobre_coordenadas(cordenadax, cordenaday, esJugador):
+
+    if esJugador:
+        print('Comprobar que no se ha efectuado disparo sobre misma posicion')
+        print('Si es agua cambia turno, si no vuele el jugador a elegir cordenadas // TIENES QUE PINTAR X o -')
+    else:
+        print('Comprobar que no se ha efectuado disparo sobre misma posicion')
+        print('Si es agua cambia turno, si no vuele la maquina a elegir cordenadas // TIENES QUE PINTAR X o -')
 
 def fin_del_juego():
-    #esto retornara un ganador
-    if barcos_jugador == 0 or barcos_maquina ==0:
-        return True
+    #check numero x de tabla jugador a y b
 
-def maquina_selecciona_coordenada_aleatoria():
+    return False
+
+    
+
+def maquina_elige_coordenadas():
     coordenadas_x= random.randint(0,10)
     coordenadas_y= random.randint(0,10)
-    buscar_coordenadas(coordenadas_x,coordenadas_y, 'maquina')
+    disparo_sobre_coordenadas(coordenadas_x,coordenadas_y, False)
  

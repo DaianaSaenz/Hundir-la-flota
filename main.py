@@ -1,19 +1,20 @@
 import funciones as funciones_juego
 import random
- 
+import numpy as np
+import clases
 
 def juego():
     # 1. Mostrar reglas Juego
     turno_jugador=True
-    funciones_juego.inicio_juego()
+   # funciones_juego.inicio_juego()
     # 2. Pintar tablero / Colocar barcos
     # FUNCION WHILE QUE EJECUTE ACCION DE DISPARO HASTA QUE UNO DE LOS OCNTADORES LLEGUE A LOS 20 PUNTOS
     
     #while not funciones_juego.fin_del_juego() :
-    funciones_juego.maquina_elige_coordenadas()
+   # funciones_juego.maquina_elige_coordenadas()
 
-    print() 
-
+    tablero_jugador= clases.Tablero()
+    tablero_jugador.posicionar_barcos()
 
     # 3. Turnos disparar, ALTERNAN TURNOS si disparo erroneo y comprobar si todos los barcos esyan hundidos
     # 5. Si hay ganador condicion while false entonces fin juego
@@ -22,5 +23,6 @@ def juego():
 
 juego()
 
+""" if __name__ == "__main__":  """
 
-""" if __name__ == "__main__": """
+

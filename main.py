@@ -4,10 +4,16 @@ import numpy as np
 import clases
 
 def juego():
-    # 1. Mostrar reglas Juego
     turno_jugador=True
-   # funciones_juego.inicio_juego()
-    # 2. Pintar tablero / Colocar barcos
+    tablero_jugador= clases.Tablero()
+    tablero_maquina=clases.Tablero()
+  
+    # 1. Mostrar reglas Juego
+     # funciones_juego.inicio_juego()
+ 
+    # 2. Colocar barcos
+    tablero_jugador.posicionar_barcos()
+    tablero_maquina.posicionar_barcos()
     # FUNCION WHILE QUE EJECUTE ACCION DE DISPARO HASTA QUE UNO DE LOS OCNTADORES LLEGUE A LOS 20 PUNTOS
     
     #while not funciones_juego.fin_del_juego() :

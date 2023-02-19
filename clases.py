@@ -12,12 +12,31 @@ class Tablero:
     # Metodo que muestre al rival los aciertos y disparos sobre agua
     # Metodo que dibuje disparos sobre tablero
     def recibir_disparo(self,coordX, coordY):
-        print('disparo')
-
+        if self.dimensiones[coordX,coordY]=='O':
+            self.dimensiones[coordX,coordY]='X'
+        elif self.dimensiones[coordX,coordY]=='X':
+            print('Disparo repetido. Pruebe de nuevo')
+        else:
+            self.dimensiones[coordX,coordY]='-'
 
     # Muestra estado actual del tablero del jugador
     def mostrar_tablero(self):
         return self.dimensiones
+    
+    # muestra al jugador rival la tabla con los disparos efectuados
+    def mostrar_tablero_disparos_recibidos(self):
+        tablero_disparos = np.where(self.dimensiones=='O'," ", self.dimensiones)
+        return tablero_disparos
+        
+    def comprobar_todos_barcos_hundidos(self):
+        numero_de_esloras_hundidas= np.count_nonzero(self.dimensiones=='X')
+        if numero_de_esloras_hundidas==20:
+            True
+        else:
+            False
+
+
+    
     # Posiciona aleatoriamente los barcos
     def posicionar_barcos(self):
         # itero sobre la listas de barcos

@@ -1,6 +1,6 @@
 import funciones as funciones_juego
 import numpy as np
-import clases
+import clases as clases
 
 def juego():
     turno_jugador=True

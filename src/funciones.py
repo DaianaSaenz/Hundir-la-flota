@@ -1,5 +1,5 @@
 import random
-import constants
+import constants as constants
 import numpy as np
 
 

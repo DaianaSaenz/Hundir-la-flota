@@ -1,10 +1,9 @@
 import numpy as np
 import random 
-from functools import reduce
 
 class Tablero:
     dimensiones = []
-    barcos = [1]
+    barcos = [4,3,3,2,2,2,1,1,1,1]
     orientacion=['N', 'S', 'E','O']
 
     def __init__(self, dimensiones):

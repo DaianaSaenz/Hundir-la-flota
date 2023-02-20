@@ -1,4 +1,4 @@
-## Bienvenido al respositorio oficial de Hundir la Flota! 😊
+## Bienvenido al repositorio oficial de Hundir la Flota! 😊
 
 ![](imagenes/descarga.jfif)
 
@@ -10,7 +10,7 @@ Para la ejecucion de este juego, debes tener instalado, Python y algun entorno d
 He utilizado distintos recursos: libreria numpy, constantes, clases, funciones, objetos y metodos.
 
 
-####INTRODUCCION:
+###INTRODUCCION:
 
 Este Proyecto nace como introduccion al mundo de la informatica, lo he creado durante mis clases del Bootcamp de Data Science y como mi primer proyecto, espero sirva de ayuda a futuros estudiantes.
 
